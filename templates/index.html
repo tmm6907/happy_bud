@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section aria-labelledby="greeting" class="container">
+    <h1 id="greeting" class="fs-h1 fw-semi-bold">Welcome To HappyBud.</h1>
+    <p class=""> Happy Bud is a communal retailer. We promote a lifestyle of happiness, featuring apparel, accessories, art, home goods and gifts of joy in the form of flowers and edibles to take you to a happy place. We cultivate a vibe of happiness with our creative concept of quality products, music and professional staff.</p>
+    <button class="flex bg-primary-400 corners-rounded justify-center fw-bold primary-btn">ORDER NOW<i class="material-symbols-outlined">arrow_forward</i></button>
+    <img src="https://www.happy-bud.com/wp-content/uploads/2022/06/penguinhscreen-1536x1250.png" alt="waving penguin" class="penguin-img1">
+</section>
+<section aria-label="Comment Ticker">
+    <ul class="flex scroll-container fw-semi-bold fs-300">
+        <div class="scroll-text flex">
+            <span class="bullet">&#183;</span>
+            <span class="">I was super happy when I got the package! It's the best product I've ever used!</span>
+        </div>
+        <div class="scroll-text flex">
+            <span class="bullet">&#183;</span>
+            <span class="">I was super happy when I got the package! It's the best product I've ever used!</span>
+        </div>
+        <div class="scroll-text flex">
+            <span class="bullet">&#183;</span>
+            <span class="">I was super happy when I got the package! It's the best product I've ever used!</span>
+        </div>
+        <div class="scroll-text flex">
+            <span class="bullet">&#183;</span>
+            <span class="">I was super happy when I got the package! It's the best product I've ever used!</span>
+        </div>
+    </ul>
+</section>
+<section aria-labelledby="demo-section" class="container flex-col fw-semi-bold">
+    <h2 id="demo-section" class="fs-h2 fw-bold">How it works?</h2>
+    <p class="">let's see how it works.</p>
+    <section aria-labelledby="demo-product">
+        <div class="container"><img src="https://www.happy-bud.com/wp-content/uploads/2022/06/1-1-1140x740.png" alt="demo image 1" class="demo-img1"></div>
+        <h3 id="demo-product" class="fw-bold fs-h3">SELECT A PRODUCT</h3>
+        <p class="">Visit our menu to find the perfect gift for you.</p>
+    </section>
+    <section aria-labelledby="demo-order">
+        <div class="container"><img src="https://www.happy-bud.com/wp-content/uploads/2022/06/2-1140x740.png" alt="demo image 2" class="demo-img2"></div>
+        <h3 id="demo-order" class="fw-bold fs-h3">PLACE AN ORDER</h3>
+        <p class=""> Order online or visit us at our shop.</p>
+        <p class="">*ID REQUIRED*</p>
+    </section>
+    <section aria-labelledby="demo-enjoy">
+        <div class="container"><img src="https://www.happy-bud.com/wp-content/uploads/2022/06/3n-1140x740.png" alt="demo image 3" class="demo-img3"></div>
+        <h3 id="demo-order" class="fw-bold fs-h3">Enjoy</h3>
+        <p class=""> Pickups are available immediately. Deliveries are on hold until further notice.</p>
+    </section>
+</section>
+<section aria-labelledby="career-header">
+    <div class="container flex-col">
+        <h2 id="career-header" class="fs-h1 fw-bold">Want To Join Our Team?</h2>
+        <p>HappyBud is the finest boutique in washington, DC. We are Initiative 71 compliant. We provide guests with premium, luxurious products at affordable prices.</p>
+        <p>We are hiring. Get in touch with us and join our team!</p>
+        <button class="flex bg-primary-400 corners-rounded justify-center fw-bold primary-btn">GET IN TOUCH<i class="material-symbols-outlined">arrow_forward</i></button>
+        <div class="container"><img src="https://www.happy-bud.com/wp-content/uploads/2023/01/handshake.png" alt="penguin image 2" class="penguin-img2"></div>
+    </div>
+</section>
+<section aria-labelledby="faq-header" class="bg-primary-400">
+    <div class="container flex-col">
+        <h2 id="faq-header" class="fs-h3 fw-bold">Frequently Asked Questions</h2>
+        <p class="fs-300">Use customer data to build great and solid product experiences that convert.</p>
+        <div class="grid">
+            <div class="faq-item-container">
+                <button onclick="toggleHiddenAria('faq1')" class="flex bg-neutral-400 corners-rounded justify-center fs-300 fw-semi-bold primary-btn"><span>How much is the minimum amount to pickup?</span><i class="material-symbols-outlined">add</i></button>
+                <p id="faq1" aria-hidden="true" class="fs-300">There is no minimum amount for pickup.</p>
+            </div>
+            <div class="faq-item-container">
+                <button onclick="toggleHiddenAria('faq2')" class="flex bg-neutral-400 corners-rounded justify-center fs-300 fw-semi-bold primary-btn"><span>What's the Happy Deal?</span><i class="material-symbols-outlined">add</i></button>
+                <p id="faq2" aria-hidden="true" class="fs-300">Every day from 11:00 AM - 2:00 PM we have a deal on flower. Every day from 2:00 PM - 5:00 PM we have a deal on edibles. Call the shop for more details.</p>
+            </div>
+            <div class="faq-item-container">
+                <button onclick="toggleHiddenAria('faq3')" class="flex bg-neutral-400 corners-rounded justify-center fs-300 fw-semi-bold primary-btn"><span>How does delivery work?</span><i class="material-symbols-outlined">add</i></button>
+                <p id="faq3" aria-hidden="true" class="fs-300">We are only open for pickup until further notice.</p>
+            </div>
+            <div class="faq-item-container">
+                <button onclick="toggleHiddenAria('faq4')" class="flex bg-neutral-400 corners-rounded justify-center fs-300 fw-semi-bold primary-btn"><span>Do I need a med card?</span><i class="material-symbols-outlined">add</i></button>
+                <p id="faq4" aria-hidden="true" class="fs-300">Happy Bud is initiative-71 compliant, which means you do NOT need a medical card -- just a valid ID showing you are 21 or older.</p>
+            </div>
+            <div class="faq-item-container">
+                <button onclick="toggleHiddenAria('faq5')" class="flex bg-neutral-400 corners-rounded justify-center fs-300 fw-semi-bold primary-btn"><span>What forms of payment does Happy Bud accept?</span><i class="material-symbols-outlined">add</i></button>
+                <p id="faq5" aria-hidden="true" class="fs-300">Happy Bud is initiative-71 compliant, which means you do NOT need a medical card -- just a valid ID showing you are 21 or older.</p>
+            </div>
+        </div>
+        <p>Still want to understand more? <a href="">Contact Us below!</a></p>
+    </div>
+    <div class="carousel">CAROUSEL GOES HERE</div>
+</section>
+<section aria-labelledby="reviews-header" class="container flex-col">
+    <img src="https://www.happy-bud.com/wp-content/uploads/2022/06/lovepenguin.png" alt="penguin-img3">
+    <h4 id="reviews-header" class="fs-h4 fw-semi-bold">CHECK OUT OUR REVIEWS</h4>
+    <div class="flex-col">
+        <div class="review-item container grid">
+            <img class="review-icon" src="https://happy-bud.com/wp-content/uploads/2022/06/2_1@300x.png" alt="person icon 1">
+            <div class="review">
+                <h4 class="fs-h4">JACK</h4>
+                <p class="fs-300">“I was a first time customer and they took great care of me, answered all my questions store is beautiful great quality products will be returning soon"</p>
+                <div class="star-container"><i id="focus" class="material-symbols-outlined star">star</i><i class="material-symbols-outlined star">star</i><i class="material-symbols-outlined star">star</i><i class="material-symbols-outlined star">star</i><i class="material-symbols-outlined star">star</i></div>
+            </div>
+            <img class="twitter-icon" src="https://img.icons8.com/material-sharp/24/null/twitter.png" alt="twitter icon"/>
+        </div>
+        <div class="review-item container grid">
+            <img class="review-icon" src="https://happy-bud.com/wp-content/uploads/2022/06/2_1@300x.png" alt="person icon 1">
+            <div class="review">
+                <h4 class="fs-h4">JACK</h4>
+                <p class="fs-300">“I was a first time customer and they took great care of me, answered all my questions store is beautiful great quality products will be returning soon"</p>
+                <div class="star-container"><i id="focus" class="material-symbols-outlined star">star</i><i class="material-symbols-outlined star">star</i><i class="material-symbols-outlined star">star</i><i class="material-symbols-outlined star">star</i><i class="material-symbols-outlined star">star</i></div>
+            </div>
+            <img class="twitter-icon" src="https://img.icons8.com/material-sharp/24/null/twitter.png" alt="twitter icon"/>
+        </div>
+        <div class="review-item container grid">
+            <img class="review-icon" src="https://happy-bud.com/wp-content/uploads/2022/06/2_1@300x.png" alt="person icon 1">
+            <div class="review">
+                <h4 class="fs-h4">JACK</h4>
+                <p class="fs-300">“I was a first time customer and they took great care of me, answered all my questions store is beautiful great quality products will be returning soon"</p>
+                <div class="star-container"><i id="focus" class="material-symbols-outlined star">star</i><i class="material-symbols-outlined star">star</i><i class="material-symbols-outlined star">star</i><i class="material-symbols-outlined star">star</i><i class="material-symbols-outlined star">star</i></div>
+            </div>
+            <img class="twitter-icon" src="https://img.icons8.com/material-sharp/24/null/twitter.png" alt="twitter icon"/>
+        </div>
+    </div>
+</section>
+<section arialabelled-by="conact-us-header">
+    <div class="container">
+        <h2 class="fs-h2">Contact Us</h2>
+        <form id="contact-us-form" action="/email/contact-us" method="POST" class="flex-col">
+            
+            <div id="names" class="grid">
+                <div>
+                    <label for="names" class="fw-semi-bold">Name <span>*</span></label>
+                    <input id="first-name" class="fs-300" type="text" name="first_name">
+                    <label for="first-name" class="text-neutral-800">First</label>
+                </div>
+                <div>
+                    <input id="last-name" class="fs-300" type="text" name="last_name">
+                    <label for="last-name" class="text-neutral-800">Last</label>
+                </div>
+            </div>
+            <div>
+                <label for="phone-number" class="fw-semi-bold">Phone</label>
+                <input id="phone-number" class="fs-300" type="number" name="phone_number">
+            </div>
+            <div>
+                <label for="email" class="fw-semi-bold">Email <span>*</span></label>
+                <input id="email" class="fs-300" type="email" name="email">
+            </div>
+            <div>
+                <label for="email-message" class="fw-semi-bold">Message <span>*</span></label>
+                <textarea id="email-message" class="fs-300" cols="48" rows="8" name="body"></textarea>
+            </div>
+            <button class="flex bg-primary-400 corners-rounded justify-center fw-bold primary-btn">Submit</button>
+        </form>
+    </div>
+</section>
+{% endblock%}

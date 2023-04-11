@@ -1,0 +1,100 @@
+<!DOCTYPE html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Poppins:wght@500;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="./static/style.css">
+        <title>HappyBud</title>
+    </head>
+    <body>
+        <header>
+            <div id="deals-msg" class="container flex bg-primary-400 justify-center">
+                <img class="emoji" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f44b.svg" alt="waving hand emoji">
+                <p class="info-msg fw-bold">Daily Deals on flower and edibles! Call store for details!</p>
+                <a href="/shop" class="u-link">Shop Now</a>
+            </div>
+            <div id="primary-navigation-container" class="container grid">
+                <div>
+                    <button id="nav-btn"><i class="material-symbols-outlined nav-menu">menu</i></button>
+                    <nav class="primary-navigation" aria-hidden="true" aria-label="Main">
+                        <ul role="list" class="flex">
+                            <li>
+                                <a href="{% url 'home' %}" class="bg-accent-400 button text-neutral-100
+                                fw-bold">Home</a>
+                            </li>
+                            <li>
+                                <a href="#" class="bg-accent-400 button text-neutral-100
+                                fw-bold">About</a>
+                            </li>
+                            <li>
+                                <a href="#" class="bg-accent-400 button text-neutral-100
+                                fw-bold">Gift</a>
+                            </li>
+                            <li>
+                                <a href="#" class="bg-accent-400 button text-neutral-100
+                                fw-bold">Menu</a>
+                            </li>
+                            <li>
+                                <a href="#" class="bg-accent-400 button text-neutral-100
+                                fw-bold">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#" class="bg-accent-400 button text-neutral-100
+                                fw-bold">Specials</a>
+                            </li>
+                            <li>
+                                <a href="#" class="bg-accent-400 button text-neutral-100
+                                fw-bold">Delivery</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>My Account</li>
+                            <li>Order Online</li>
+                            <li>About Us</li>
+                            <li>Help</li>
+                        </ul>
+                        <div>ICONS</div>
+                    </nav>
+                </div>
+                <a href="{% url 'home' %}" class="logo-container"><img src="https://happy-bud.com/wp-content/uploads/2022/06/HappyBudLogo-1.svg" alt="company logo" class="logo-default"></a>
+                <button id="profile-btn"><i class="material-symbols-outlined profile">person</i></button>
+            </div>
+        </header>
+
+            {% block content %}
+            INSERT HERE
+            {% endblock %}
+
+        <footer class="main grid container">
+            <div class="footer-col1">
+                <img src="https://happy-bud.com/wp-content/uploads/2022/06/HappyBudLogo-1.svg" alt="company logo" class="logo-footer">
+                <p class="fs-300">Open 7 days a week from 11:00am - 9:00pm.</p>
+                <p class="fs-300">4013 Georgia Ave NW, Washington, DC 20011</p>
+                <div class="socials grid"><img src="https://img.icons8.com/ios-glyphs/30/null/facebook.png" alt="facebook-logo"><img src="../static/tik-tok.png" alt=""><img src="https://img.icons8.com/ios/50/null/instagram-new--v1.png" alt="instagram-logo"></div>
+            </div>
+            <div class="footer-col2">
+                <h3 class="fs-h4 fw-semi-bold">COMPANY</h3>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li class="shop-btn grid"><a href="">Shop</a><button><i class="material-symbols-outlined">expand_more</i></button></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-col3">
+                <h3 class="fs-h4 fw-semi-bold">NEED HELP?</h3>
+            </div>
+            <div class="footer-col4">
+    
+            </div>
+    
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script type="text/javascript" src="./static/main.js"></script>
+    </body>
+</html>
