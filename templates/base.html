@@ -1,12 +1,15 @@
-<!DOCTYPE html lang="en">
+<!DOCTYPE html>
+<html lang="en-us">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Happy Bud is a communal retailer. We promote a lifestyle of happiness, featuring apparel, accessories, art, home goods and gifts of joy in the form of flowers and edibles to take you to a happy place.">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400&family=Poppins:wght@500;700;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <script src="https://unpkg.com/htmx.org@1.9.0" integrity="sha384-aOxz9UdWG0yBiyrTwPeMibmaoq07/d3a96GCbb9x60f3mOt5zwkjdbcHFnKH8qls" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./static/style.css">
         <title>HappyBud</title>
     </head>
@@ -15,11 +18,11 @@
             <div id="deals-msg" class="container flex bg-primary-400 justify-center">
                 <img class="emoji" src="https://s.w.org/images/core/emoji/14.0.0/svg/1f44b.svg" alt="waving hand emoji">
                 <p class="info-msg fw-bold">Daily Deals on flower and edibles! Call store for details!</p>
-                <a href="/shop" class="u-link">Shop Now</a>
+                <a href="{% url 'about' %}" class="u-link">Shop Now</a>
             </div>
             <div id="primary-navigation-container" class="container grid">
                 <div>
-                    <button id="nav-btn"><i class="material-symbols-outlined nav-menu">menu</i></button>
+                    <button id="nav-btn"><i class="material-symbols-outlined nav-menu fs-500">menu</i></button>
                     <nav class="primary-navigation" aria-hidden="true" aria-label="Main">
                         <ul role="list" class="flex">
                             <li>
@@ -27,41 +30,28 @@
                                 fw-bold">Home</a>
                             </li>
                             <li>
-                                <a href="#" class="bg-accent-400 button text-neutral-100
+                                <a href="{% url 'about'%}" class="bg-accent-400 button text-neutral-100
                                 fw-bold">About</a>
                             </li>
                             <li>
-                                <a href="#" class="bg-accent-400 button text-neutral-100
-                                fw-bold">Gift</a>
+                                <a href="{% url 'shop' %}" class="bg-accent-400 button text-neutral-100
+                                fw-bold">Shop</a>
                             </li>
                             <li>
-                                <a href="#" class="bg-accent-400 button text-neutral-100
-                                fw-bold">Menu</a>
-                            </li>
-                            <li>
-                                <a href="#" class="bg-accent-400 button text-neutral-100
+                                <a href="{% url 'blog' %}" class="bg-accent-400 button text-neutral-100
                                 fw-bold">Blog</a>
                             </li>
                             <li>
-                                <a href="#" class="bg-accent-400 button text-neutral-100
-                                fw-bold">Specials</a>
+                                <a href="{% url 'blog' %}" class="bg-accent-400 button text-neutral-100
+                                fw-bold">Careers</a>
                             </li>
-                            <li>
-                                <a href="#" class="bg-accent-400 button text-neutral-100
-                                fw-bold">Delivery</a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>My Account</li>
-                            <li>Order Online</li>
-                            <li>About Us</li>
-                            <li>Help</li>
+                            <li id="nav-help">Help</li>
                         </ul>
                         <div>ICONS</div>
                     </nav>
                 </div>
                 <a href="{% url 'home' %}" class="logo-container"><img src="https://happy-bud.com/wp-content/uploads/2022/06/HappyBudLogo-1.svg" alt="company logo" class="logo-default"></a>
-                <button id="profile-btn"><i class="material-symbols-outlined profile">person</i></button>
+                <button id="profile-btn"><i class="material-symbols-outlined profile fs-500">person</i></button>
             </div>
         </header>
 
@@ -74,25 +64,34 @@
                 <img src="https://happy-bud.com/wp-content/uploads/2022/06/HappyBudLogo-1.svg" alt="company logo" class="logo-footer">
                 <p class="fs-300">Open 7 days a week from 11:00am - 9:00pm.</p>
                 <p class="fs-300">4013 Georgia Ave NW, Washington, DC 20011</p>
-                <div class="socials grid"><img src="https://img.icons8.com/ios-glyphs/30/null/facebook.png" alt="facebook-logo"><img src="../static/tik-tok.png" alt=""><img src="https://img.icons8.com/ios/50/null/instagram-new--v1.png" alt="instagram-logo"></div>
+                <div class="socials grid"><a href="https://facebook.com" target=”_blank”><img src="https://img.icons8.com/ios-glyphs/30/null/facebook.png" alt="facebook-logo"></a><a href="https://tiktok.com" target=”_blank”><img src="../static/tik-tok.png" alt=""></a><a href="https://instagram.com" target=”_blank”><img src="https://img.icons8.com/ios/50/null/instagram-new--v1.png" alt="instagram-logo"></a></div>
             </div>
             <div class="footer-col2">
-                <h3 class="fs-h4 fw-semi-bold">COMPANY</h3>
+                <h4 class="fs-h4 fw-semi-bold">COMPANY</h4>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li class="shop-btn grid"><a href="">Shop</a><button><i class="material-symbols-outlined">expand_more</i></button></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Careers</a></li>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li class="shop-btn grid"><a href="{% url 'shop' %}">Shop</a><button><i class="material-symbols-outlined">expand_more</i></button></li>
+                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
                 </ul>
             </div>
-            <div class="footer-col3">
-                <h3 class="fs-h4 fw-semi-bold">NEED HELP?</h3>
+            <div class="footer-col3 flex-col">
+                <h4 class="fs-h4 fw-semi-bold"><a id="#contact-us">NEED HELP?</a></h4>
+                <div>
+                    <h5 class="fs-h5 fw-semi-bold">Toll-free Customer Care</h5>
+                    <p class="fs-300">+(1) 202-428-5719</p>
+                </div>
             </div>
-            <div class="footer-col4">
-    
+            <div class="footer-col4 flex-col">
+                <h4 class="fs-h4 fw-semi-bold">KEEP IN TOUCH</h4>
+                <div>
+                    <h5 class="fs-h5 fw-semi-bold">Need live support?</h5>
+                    <p class="fs-300">hello@happy-bud.com</p>
+                </div>
+                <button id="join-btn" class="flex bg-primary-400 corners-rounded justify-center fs-300 fw-bold primary-btn">Join our News Letter!<i class="material-symbols-outlined">arrow_forward</i></button>
             </div>
-    
+            <p id="copyright" class="fs-300 fw-semi-bold">&copy; 2023 HappyBud. All Rights Reserved.</p>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script type="text/javascript" src="./static/main.js"></script>

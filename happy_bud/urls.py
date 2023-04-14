@@ -18,15 +18,17 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from comment.views import CommentViewSet
-from pages.views import index
+from email_handler.views import EmailViewSet
+
 
 api_router = routers.DefaultRouter()
 api_router.register(r"comments", CommentViewSet)
+api_router.register(r"emails", EmailViewSet) # Incsecure because you only need create functionality
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
     path('api/', include(api_router.urls)),
-    path('', index, name="home"),
+    path('', include("pages.urls")),
 ]

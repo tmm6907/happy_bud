@@ -1,11 +1,12 @@
 
 :root {
-    --clr-accent-400: hsl(351, 84%, 64%);
+    --clr-accent-400: hsl(352, 86%, 63%);
+    --clr-accent-600: hsl(340, 88%, 53%);
     --clr-primary-400: hsl(70, 95%, 40%);
     --clr-primary-bg: hsl(34, 78%, 97%);
     --clr-secondary-bg: hsl(0, 0%, 96%);
 
-    --clr-neutral-100: hsl(0, 0%, 95%);
+    --clr-neutral-100: hsl(0, 0%, 98%);
     --clr-neutral-200: hsl(0, 0%, 75%);
     --clr-neutral-800: hsl(0, 0%, 25%);
     --clr-neutral-900: hsl(0, 0%, 11%);
@@ -40,6 +41,7 @@
     --fs-button: var(--fs-300);
     --ctn-padding: 3em;
     --btn-padding: .325em .75em;
+    --img-padding: 2em 2em;
     --btn-radius: 3rem;
     --logo-width: 6.75rem;
     --default-gap: 1em;
@@ -95,8 +97,10 @@ body {
     font-weight: var(--fw-regular);
 }
 
-a {
+a,
+a:visited {
     text-decoration: none;
+    color: var(--clr-neutral-400);
 }
 
 h1 {
@@ -246,6 +250,10 @@ button{
     padding: var(--ctn-padding);
 }
 
+.img-container{
+    margin: var(--img-padding);
+}
+
 .flex-col {
     display: flex;
     flex-direction: column;
@@ -385,7 +393,7 @@ section[aria-labelledby="greeting"] p {
     color: var(--clr-neutral-800);
 }
 
-section[aria-labelledby="greeting"] button {
+section[aria-labelledby="greeting"] a {
     margin-inline: auto;
     align-items: center;
     min-width: 80%;
@@ -397,18 +405,18 @@ section[aria-labelledby="greeting"] button {
 }
 
 .penguin-img1 {
-    width: 34rem;
     padding-top: 1.5em;
     margin-inline: auto;
 }
 
 .scroll-container {
-    padding: 1em 0 1em 0;
+    padding: 1.25em 0 1.25em 0;
     background-color: var(--clr-accent-400);
     border: 1px solid var(--clr-accent-400);
     color: var(--clr-neutral-100);
     overflow: hidden;
     gap: 2rem;
+    letter-spacing: .25ch;
 }
 
 .scroll-text {
@@ -611,6 +619,7 @@ footer.main {
     padding: 1.5em;
     gap: 1em;
 }
+
 footer.main ul li{
     list-style: none;
 }
@@ -636,14 +645,25 @@ footer.main ul li.shop-btn button i{
 }
 
 .socials{
-    width: 80%;
     grid-template-columns: auto auto auto;
-    justify-items: center;
-    align-items: center;
-    gap: .5em;
     padding: 1em 0 1em 0;
+    justify-items: center;
 }
 
 .socials img{
     width: 1.5rem;
+}
+.footer-col3{
+    gap: 1em;
+}
+.footer-col4{
+    gap: 1em;
+}
+#join-btn{
+    padding: .5em 1em;
+}
+
+#copyright{
+    grid-column: 3/5;
+    text-align: end;
 }

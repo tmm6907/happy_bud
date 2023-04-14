@@ -10,11 +10,14 @@ function toggleHiddenAria(id: string) {
      }
 }
 
-// form?.addEventListener("Submit", async(e) => {
-//     e.preventDefault();
-//     try{
-//         let data = new FormData(e.currentTarget);
-//         let form_data = Object.fromEntries(data.entries());
-//         console.log();
-//     }
-// })
+function formSubmit(event) {
+    console.log("Arrived!")
+    var url = "http://127.0.0.1:8000/api/emails/";
+    var request = new XMLHttpRequest();
+    request.open('POST', url, true);
+    let data = new FormData(event.target)
+    data.append("subject", `${event.target.id}`)
+    request.send(data); 
+}
+form?.addEventListener("submit", formSubmit);
+  

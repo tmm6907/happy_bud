@@ -10,11 +10,13 @@ function toggleHiddenAria(id) {
         focusItem === null || focusItem === void 0 ? void 0 : focusItem.setAttribute("aria-hidden", "false");
     }
 }
-// form?.addEventListener("Submit", async(e) => {
-//     e.preventDefault();
-//     try{
-//         let data = new FormData(e.currentTarget);
-//         let form_data = Object.fromEntries(data.entries());
-//         console.log();
-//     }
-// })
+function formSubmit(event) {
+    console.log("Arrived!");
+    var url = "http://127.0.0.1:8000/api/emails/";
+    var request = new XMLHttpRequest();
+    request.open('POST', url, true);
+    var data = new FormData(event.target);
+    data.append("subject", "".concat(event.target.id));
+    request.send(data);
+}
+form === null || form === void 0 ? void 0 : form.addEventListener("submit", formSubmit);
